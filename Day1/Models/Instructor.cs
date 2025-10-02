@@ -4,6 +4,7 @@ namespace Day1.Controllers
 {
     public class Instructor
     {
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public int Salary { get; set; }

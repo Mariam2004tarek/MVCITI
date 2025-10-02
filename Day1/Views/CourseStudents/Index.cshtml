@@ -1,0 +1,15 @@
+﻿@using Day1.Controllers
+@model List<CourseStudents>
+
+<table class="table table-bordered table-hover">
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Id</td>
+            <td>@i.StdId</td>
+            <td>@i.CrsId</td>
+            <td>@i.Degree</td>
+        </tr>
+    }
+</table>
+

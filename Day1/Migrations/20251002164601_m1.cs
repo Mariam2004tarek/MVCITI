@@ -44,7 +44,7 @@ namespace Day1.Migrations
                         column: x => x.DeptId,
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -67,7 +67,7 @@ namespace Day1.Migrations
                         column: x => x.DeptId,
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,13 +91,13 @@ namespace Day1.Migrations
                         column: x => x.CrsId,
                         principalTable: "Course",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Instructor_Department_DeptId",
                         column: x => x.DeptId,
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -117,13 +117,13 @@ namespace Day1.Migrations
                         column: x => x.CrsId,
                         principalTable: "Course",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_CourseStudent_Student_StdId",
                         column: x => x.StdId,
                         principalTable: "Student",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -139,8 +139,7 @@ namespace Day1.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Instructor_CrsId",
                 table: "Instructor",
-                column: "CrsId",
-                unique: true);
+                column: "CrsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Instructor_DeptId",

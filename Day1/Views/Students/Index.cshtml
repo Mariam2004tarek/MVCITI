@@ -1,0 +1,22 @@
+﻿@using Day1.Controllers
+@model List<Student>
+
+<table class=" table table-bordered table-hover">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Grade</td>
+        <td>Address</td>
+        <td>DeptNo</td>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Grade</td>
+            <td>@item.Address</td>
+            <td>@item.DeptId</td>
+        </tr>
+    }
+</table>
